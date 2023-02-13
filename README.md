@@ -43,31 +43,30 @@ Instructions on setting up the project locally:
 
 2. Open the project in your VSCode
 
-3. Run on your terminal
+3. Run on your terminal - Build the app image
 
     ```sh
-    composer install
+    docker-compose build app
     ```
 
-4. To initialize docker
+4. To run the application
 
     ```sh
-    docker-compose up -d
+    docker-compose up
+
     ```
 
-5. To run the migration
+5. Run composer install to install the application dependencies
 
     ```sh
-    php artisan migrate
+    docker-compose exec app rm -rf vendor composer.lock
+    docker-compose exec app composer install
     ```
 
-6. To run the tests - seed the database
+6. Run to generate a unique application key
+
     ```sh
-    php artisan test
-    ```
-7. To run the application
-    ```sh
-    php artisan serve
+    docker-compose exec app php artisan key:generate
     ```
 
 After that, you can visit `/graphiql` to try it.
