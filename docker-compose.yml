@@ -15,6 +15,12 @@ services:
         - ./:/var/www
       networks:
         - playerscores
+      environment:
+        DB_HOST: db
+        APP_NAME: PlayerScores
+        APP_ENV: dev
+        APP_DEBUG: true
+        APP_URL: http://localhost:8000
 
     db:
       image: mysql:8.0
