@@ -38,6 +38,8 @@ services:
         - "3306:3306"
       volumes:
         - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+        - playerscores-mysql:/var/lib/mysql
+
       networks:
         - playerscores
 
@@ -56,3 +58,6 @@ services:
 networks:
   playerscores:
     driver: bridge
+
+volumes:
+  playerscores-mysql:
