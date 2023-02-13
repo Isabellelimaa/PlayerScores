@@ -86,7 +86,7 @@ Project Link: [https://github.com/Isabellelimaa/PlayerScores](https://github.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[phpunit.com]: https://img.shields.io/badge/PHPUnit-FF2D20?style=for-the-badge&logo=phpunit&logoColor=white
+[phpunit.com]: https://img.shields.io/badge/PHPUnit-3d9cd7?style=for-the-badge&logo=php&logoColor=white
 [phpunit-url]: https://phpunit.readthedocs.io/en/10.0/
 [laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
 [laravel-url]: https://laravel.com
