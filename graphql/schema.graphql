@@ -1,0 +1,27 @@
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
+scalar DateTime
+    @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+"Indicates what fields are available at the top level of a query operation."
+type Query {
+    playerScores: [PlayerScore!]! @all
+    playerScores(
+        orderBy: _ @orderBy(columns: ["score", "createdAt"])
+    ): [PlayerScore!]! @all
+    playerScore(id: ID @where(operator: "=")): PlayerScore! @find
+}
+
+type Mutation {
+    createPlayerScore(
+        name: String! @rules(apply: ["required"])
+        score: Int! @rules(apply: ["required"])
+    ): PlayerScore! @create
+    deletePlayerScore(id: ID! @rules(apply: ["required"])): PlayerScore @delete
+}
+
+type PlayerScore @model {
+    id: ID!
+    name: String!
+    score: Int!
+    createdAt: DateTime
+}

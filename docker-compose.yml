@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  db:
+    container_name: player-scores-mysql
+    image: mysql:8.0
+    restart: always
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: myapp
+      MYSQL_DATABASE: myapp
+      MYSQL_USER: myapp
+      MYSQL_PASSWORD: myapp
+    ports:
+        - "3306:3306"
+volumes:
+  mysql:
