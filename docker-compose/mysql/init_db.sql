@@ -4,9 +4,7 @@ CREATE TABLE `player_scores` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255),
   `score` INT,
-  `created_at` DATE,
-  `updated_at` DATE,
+  `created_at` DATE NULL,
+  `updated_at` DATE NULL,
   PRIMARY KEY (`id`)
 );
-
-INSERT INTO `player_scores` (name, score) VALUES (‘Petter’,748),(’Sara’,834),(‘Lucas’,563);

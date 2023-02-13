@@ -53,7 +53,6 @@ Instructions on setting up the project locally:
 
     ```sh
     docker-compose up
-
     ```
 
 5. Run composer install to install the application dependencies
@@ -63,10 +62,10 @@ Instructions on setting up the project locally:
     docker-compose exec app composer install
     ```
 
-6. Run to generate a unique application key
+6. Run to seed the database
 
     ```sh
-    docker-compose exec app php artisan key:generate
+    docker exec playerscores-app php artisan db:seed -n
     ```
 
 After that, you can visit `/graphiql` to try it.
