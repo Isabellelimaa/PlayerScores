@@ -65,7 +65,7 @@ Instructions on setting up the project locally:
 6. Run to seed the database
 
     ```sh
-    docker-compose exec playerscores-app php artisan db:seed -n
+    docker-compose exec app php artisan db:seed -n
     ```
 
 After that, you can visit `http://localhost:8000/graphiql` to try it.
