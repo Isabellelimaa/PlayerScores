@@ -68,7 +68,7 @@ Instructions on setting up the project locally:
     docker exec playerscores-app php artisan db:seed -n
     ```
 
-After that, you can visit `/graphiql` to try it.
+After that, you can visit `http://localhost:8000/graphiql` to try it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
